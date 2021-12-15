@@ -1,6 +1,7 @@
-import 'package:bloc_news/blocs/News/news_bloc.dart';
-import 'package:bloc_news/repositories/news_repository.dart';
-import 'package:bloc_news/views/home_screen.dart';
+import 'package:bloc_news/Logic_layer/News/news_bloc.dart';
+import 'package:bloc_news/Data_layer/repositories/news_repository.dart';
+import 'package:bloc_news/Presentation_layer/home_screen.dart';
+import 'package:bloc_news/Services/news_api.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider<NewsBloc>(
             create: (context) =>
-                NewsBloc(newsRepository: NewsRepository())..add(NewsRequested()),
+                NewsBloc(newsRepository: NewsRepository(API.sandbox()))
+                  ..add(NewsRequested()),
           ),
         ],
         child: MaterialApp(

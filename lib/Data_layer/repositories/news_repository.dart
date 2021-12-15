@@ -1,11 +1,15 @@
 import 'dart:convert';
+import 'package:bloc_news/Services/news_api.dart';
 import '../models/article_model.dart';
 import 'package:http/http.dart' as http;
 
 class NewsRepository {
+  final API api;
+  NewsRepository(this.api);
+
   Future<List<ArticleModel>> fetchNews() async {
-    var response = await http.get(Uri.parse(
-        "https://newsapi.org/v2/everything?q=tesla&from=2021-12-14&sortBy=publishedAt&apiKey=eee5df5dfc9844618cee1166940e9115"));
+    final uri = api.endpointUri();
+    var response = await http.get(uri);
 
     var data = jsonDecode(response.body);
 
