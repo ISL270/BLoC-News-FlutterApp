@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:bloc_news/Logic_layer/News/news_bloc.dart';
 import 'package:bloc_news/Data_layer/models/article_model.dart';
-import 'package:bloc_news/Services/news_api.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_web_browser/flutter_web_browser.dart';
@@ -82,9 +81,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                         safariVCOptions:
                                             const SafariViewControllerOptions(
                                           barCollapsingEnabled: true,
-                                          preferredBarTintColor: Colors.green,
+                                          preferredBarTintColor: Colors.grey,
                                           preferredControlTintColor:
-                                              Colors.amber,
+                                              Colors.grey,
                                           dismissButtonStyle:
                                               SafariViewControllerDismissButtonStyle
                                                   .close,
