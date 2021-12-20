@@ -4,7 +4,6 @@ import 'package:bloc_news/Presentation_layer/home_screen.dart';
 import 'package:bloc_news/Services/news_api.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() => runApp(const MyApp());
@@ -22,12 +21,9 @@ class MyApp extends StatelessWidget {
                   ..add(NewsRequested()),
           ),
         ],
-        child: MaterialApp(
-          theme: ThemeData(
-              textTheme:
-                  GoogleFonts.poppinsTextTheme(Theme.of(context).textTheme)),
+        child: const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: const HomeScreen(),
+          home: HomeScreen(),
         ));
   }
 }

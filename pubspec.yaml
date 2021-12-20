@@ -15,7 +15,6 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^8.0.0
   flutter_web_browser: ^0.16.0
-  google_fonts: ^2.1.0
   http: ^0.13.4
 
 dev_dependencies:
@@ -23,9 +22,34 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
+  flutter_native_splash: ^1.3.2
+
+flutter_native_splash:
+  color: "#585858"
+  image: assets/images/newsIcon.png
+  android: true
+  ios: true
+
 flutter:
 
   uses-material-design: true
   
   assets:
-    - asset/
+    - assets/
+
+  fonts:
+    - family: PantonBold
+      fonts:
+        - asset: assets/fonts/panton/Panton-BlackCaps.otf
+
+    - family: PantonBoldItalic
+      fonts:
+        - asset: assets/fonts/panton/Panton-BlackitalicCaps.otf
+
+    - family: Panton
+      fonts:
+        - asset: assets/fonts/panton/Panton-LightCaps.otf
+
+    - family: PantonItalic
+      fonts:
+        - asset: assets/fonts/panton/Panton-LightitalicCaps.otf
