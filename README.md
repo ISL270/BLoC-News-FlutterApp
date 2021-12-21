@@ -1,4 +1,4 @@
-# BLoC_News_FlutterApp
+# BLoC-News-FlutterApp
 <p align="center">
 <img src="https://user-images.githubusercontent.com/32794378/146693529-bf8b0a97-ef69-48ac-b5b1-43761d8394a6.png" alt="Logo" width="120">
 </p>
@@ -8,7 +8,7 @@
 <img src="https://visitor-badge.glitch.me/badge?page_id=ISL270.BLoC_News_FlutterApp&right_color=red&left_text=visitors" /></h3>
 
 ## About
-I developed a News app implementing the [**BLoC Architecture**](https://bloclibrary.dev/#/architecture) & [**State management**](https://pub.dev/packages/bloc). It uses [**NewsAPI**](https://pub.dev/packages/bloc) to fetch and display the latest news from the U.S, users can then tap the article that interests them and it will open inside the app using [**flutter_web_browser**](https://pub.dev/packages/flutter_web_browser). ( This app is [**null safe**](https://dart.dev/null-safety) )
+I developed a [**null safe**](https://dart.dev/null-safety) News app implementing the [**BLoC Architecture**](https://bloclibrary.dev/#/architecture) & [**State management**](https://pub.dev/packages/bloc). It uses [**NewsAPI**](https://pub.dev/packages/bloc) api to request and display the latest news from the U.S, users can then tap the article that interests them and it will open inside the app using [**flutter_web_browser**](https://pub.dev/packages/flutter_web_browser).
 
 **Note:** I didn't include my `api_keys.dart` file, so you have to make your own dart file that stores your keys, otherwise it won't work.
 
