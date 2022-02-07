@@ -5,6 +5,7 @@ import 'package:bloc_news/Services/news_api.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'Services/globals.dart';
 
 void main() => runApp(const MyApp());
 
@@ -13,17 +14,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MultiBlocProvider(
-        providers: [
-          BlocProvider<NewsBloc>(
-            create: (context) =>
-                NewsBloc(newsRepository: NewsRepository(API.sandbox()))
-                  ..add(NewsRequested()),
-          ),
-        ],
-        child: const MaterialApp(
-          debugShowCheckedModeBanner: false,
-          home: HomeScreen(),
-        ));
+    return BlocProvider<NewsBloc>(
+      create: (context) =>
+          NewsBloc(newsRepository: NewsRepository(API.sandbox()))
+            ..add(NewsRequested()),
+      child: MaterialApp(
+        scaffoldMessengerKey: snackbarKey,
+        debugShowCheckedModeBanner: false,
+        home: HomeScreen(),
+      ),
+    );
   }
 }

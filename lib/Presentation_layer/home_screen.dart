@@ -26,7 +26,7 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
           appBar: AppBar(
             centerTitle: true,
-            backgroundColor: Color(0xff4d4d4d),
+            backgroundColor: const Color(0xff4d4d4d),
             title: Text(
               "Latest News".toUpperCase(),
               style: const TextStyle(
@@ -40,7 +40,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Stack(
               children: [
                 Container(
-                  color: Color(0xff585858),
+                  color: const Color(0xff585858),
                   child: BlocBuilder<NewsBloc, NewsState>(
                     builder: (BuildContext context, NewsState state) {
                       if (state is NewsLoading) {
@@ -66,10 +66,15 @@ class _HomeScreenState extends State<HomeScreen> {
                                             const CustomTabsOptions(
                                           colorScheme:
                                               CustomTabsColorScheme.dark,
-                                          toolbarColor: Color(0xff0892fd),
-                                          secondaryToolbarColor: Colors.grey,
-                                          navigationBarColor: Colors.grey,
                                           addDefaultShareMenuItem: true,
+                                          defaultColorSchemeParams:
+                                              CustomTabsColorSchemeParams(
+                                                  toolbarColor:
+                                                      Color(0xff0892fd),
+                                                  secondaryToolbarColor:
+                                                      Colors.grey,
+                                                  navigationBarColor:
+                                                      Colors.grey),
                                           instantAppsEnabled: true,
                                           showTitle: true,
                                           urlBarHidingEnabled: true,
@@ -98,7 +103,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   },
                                   child: Container(
                                     decoration: BoxDecoration(
-                                        color: Color(0xff585858),
+                                        color: const Color(0xff585858),
                                         borderRadius: BorderRadius.circular(10),
                                         boxShadow: const [
                                           BoxShadow(
