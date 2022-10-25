@@ -8,7 +8,7 @@
 <img src="https://visitor-badge.glitch.me/badge?page_id=ISL270.BLoC_News_FlutterApp&right_color=red&left_text=visitors" /></h3>
 
 ## About
-I developed a [**null safe**](https://dart.dev/null-safety) News app implementing the [**BLoC Architecture**](https://bloclibrary.dev/#/architecture) & [**State management**](https://pub.dev/packages/bloc). It uses [**NewsAPI**](https://pub.dev/packages/bloc) api to request and display the latest news from the U.S, users can then tap the article that interests them and it will open inside the app using [**flutter_web_browser**](https://pub.dev/packages/flutter_web_browser).
+I developed a [**null safe**](https://dart.dev/null-safety) News app implementing the [**BLoC Architecture**](https://bloclibrary.dev/#/architecture) & [**State management**](https://pub.dev/packages/bloc). It uses [**NewsAPI**](https://newsapi.org/) api to request and display the latest news from the U.S, users can then tap the article that interests them and it will open inside the app using [**flutter_web_browser**](https://pub.dev/packages/flutter_web_browser).
 
 **Note:** I didn't include my `api_keys.dart` file, so you have to make your own dart file that stores your keys, otherwise it won't work.
 
